@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-gray-800 bg-white;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .glass-effect {
+    @apply bg-white/30 backdrop-blur-md border border-white/50;
+  }
+  
+  .glass-card {
+    @apply glass-effect rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-white/40;
+  }
+  
+  .glass-button {
+    @apply glass-effect px-4 py-2 rounded-lg hover:bg-white/50 transition-all duration-200;
+  }
+}
