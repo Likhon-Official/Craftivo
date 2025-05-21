@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 import ThemeCard from './ThemeCard';
 import CategoryFilter from './CategoryFilter';
+import SearchBar from './SearchBar';
 import { Theme } from '../types';
 import { themeData, categories } from '../data/ThemeData';
 
 const ThemeGrid: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const filteredThemes = themeData
-    .filter(theme => activeCategory === 'all' || theme.categoryId === activeCategory);
+    .filter(theme => {
+      const matchesCategory = activeCategory === 'all' || theme.categoryId === activeCategory;
+      const matchesSearch = searchQuery === '' || 
+        theme.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        theme.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        theme.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      return matchesCategory && matchesSearch;
+    });
 
   return (
     <section id="themes" className="py-16 relative overflow-hidden">
@@ -32,6 +41,10 @@ const ThemeGrid: React.FC = () => {
           </p>
         </div>
 
+        <div className="mb-8">
+          <SearchBar onSearch={setSearchQuery} />
+        </div>
+
         <CategoryFilter
           categories={categories}
           activeCategory={activeCategory}
@@ -53,7 +66,10 @@ const ThemeGrid: React.FC = () => {
         {filteredThemes.length > 0 && filteredThemes.length < themeData.length && (
           <div className="text-center mt-12">
             <button
-              onClick={() => setActiveCategory('all')}
+              onClick={() => {
+                setActiveCategory('all');
+                setSearchQuery('');
+              }}
               className="bg-white hover:bg-gray-50 text-primary-600 font-medium px-6 py-3 rounded-lg border border-primary-200 transition-all duration-200 shadow-sm hover:shadow-md"
             >
               View All Themes
@@ -65,4 +81,4 @@ const ThemeGrid: React.FC = () => {
   );
 };
 
-export default ThemeGrid
+export default ThemeGrid;
