@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
 
 interface SearchBarProps {
@@ -26,18 +26,18 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
       <div
         className={`flex items-center transition-all duration-300 ${
           isExpanded ? 'bg-white shadow-lg' : 'bg-white/50'
-        } backdrop-blur-lg rounded-full border border-white/50`}
+        } backdrop-blur-lg rounded-full border border-primary-100`}
       >
         <div className="flex-1 flex items-center">
           <Search
             size={20}
             className={`ml-4 transition-colors duration-200 ${
-              isExpanded ? 'text-purple-600' : 'text-gray-400'
+              isExpanded ? 'text-primary-600' : 'text-gray-400'
             }`}
           />
           <input
             type="text"
-            placeholder="Search themes..."
+            placeholder="Search themes by name, category, or tags..."
             value={query}
             onChange={handleSearch}
             onFocus={() => setIsExpanded(true)}
@@ -47,14 +47,14 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         {query && (
           <button
             onClick={clearSearch}
-            className="p-2 hover:text-purple-600 transition-colors duration-200"
+            className="p-2 hover:text-primary-600 transition-colors duration-200 mr-2"
           >
             <X size={20} />
           </button>
         )}
       </div>
 
-      {isExpanded && (
+      {isExpanded && query && (
         <div className="absolute inset-x-0 top-full mt-2 bg-white rounded-lg shadow-lg border border-gray-100 divide-y divide-gray-100 max-h-96 overflow-auto z-50">
           <div className="p-4 text-sm text-gray-500">
             Type to search themes...
