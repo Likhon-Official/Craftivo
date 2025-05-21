@@ -16,13 +16,15 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
-            Premium Themes for{' '}
+            Craft Beautiful{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-500 inline-block">
-              Modern Developers
+              Digital Experiences
             </span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Elevate your projects with stunning, responsive themes designed with attention to detail. Perfect for developers who demand both beauty and functionality.
+          Premium themes and templates crafted with passion for developers who value design excellence and code quality.
+
+
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
