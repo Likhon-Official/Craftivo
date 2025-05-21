@@ -4,21 +4,21 @@ import { Quote } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    content: "The themes from ThemeGlass have transformed my client projects. The glassmorphism effects and attention to detail are simply incredible.",
+    content: "The themes from Craftivo have transformed my client projects. The glassmorphism effects and attention to detail are simply incredible.",
     author: "Alex Morgan",
     role: "Frontend Developer",
     avatar: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150"
   },
   {
     id: 2,
-    content: "I've tried many theme marketplaces, but none come close to the quality and support I get from ThemeGlass. Worth every penny!",
+    content: "I've tried many theme marketplaces, but none come close to the quality and support I get from Craftivo. Worth every penny!",
     author: "Sarah Johnson",
     role: "Web Designer",
     avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150"
   },
   {
     id: 3,
-    content: "As a startup founder, I needed a professional look without the massive design budget. ThemeGlass delivered exactly what I needed.",
+    content: "As a startup founder, I needed a professional look without the massive design budget. Craftivo delivered exactly what I needed.",
     author: "Michael Chen",
     role: "Startup Founder",
     avatar: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=150"
