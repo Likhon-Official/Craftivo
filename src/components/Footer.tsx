@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className="text-gray-500 hover:text-purple-600 transition-colors duration-200"
+                  className="text-gray-500 hover:text-primary-600 transition-colors duration-200"
                 >
                   {social.icon}
                 </a>
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {['All Themes', 'Landing Pages', 'E-commerce', 'Dashboards', 'Portfolios'].map((item, index) => (
                 <li key={index}>
-                  <a href="#" className="text-gray-600 hover:text-purple-600 transition-colors duration-200">
+                  <a href="#" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
                     {item}
                   </a>
                 </li>
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {['Documentation', 'Tutorials', 'Blog', 'Changelog', 'Support'].map((item, index) => (
                 <li key={index}>
-                  <a href="#" className="text-gray-600 hover:text-purple-600 transition-colors duration-200">
+                  <a href="#" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
                     {item}
                   </a>
                 </li>
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {['About Us', 'Careers', 'Privacy Policy', 'Terms of Service', 'Contact'].map((item, index) => (
                 <li key={index}>
-                  <a href="#" className="text-gray-600 hover:text-purple-600 transition-colors duration-200">
+                  <a href="#" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
                     {item}
                   </a>
                 </li>
@@ -77,22 +77,22 @@ const Footer: React.FC = () => {
         
         <div className="pt-8 border-t border-gray-200 text-center">
           <div className="text-gray-600 flex flex-col md:flex-row items-center justify-center md:justify-between">
-            <p>&copy; 2025 ThemeGlass. All rights reserved.</p>
+            <p>&copy; 2025 Craftivo. All rights reserved.</p>
             <p className="flex items-center mt-4 md:mt-0">
-              Made with <Heart size={16} className="mx-1 text-red-500" /> by ThemeGlass Team
+              Made with <Heart size={16} className="mx-1 text-red-500" /> by Craftivo Team
             </p>
           </div>
           
           <div className="mt-6 flex items-center justify-center space-x-4">
-            <a href="#" className="text-gray-500 hover:text-purple-600 transition-colors duration-200 text-sm">
+            <a href="#" className="text-gray-500 hover:text-primary-600 transition-colors duration-200 text-sm">
               Privacy Policy
             </a>
             <span className="text-gray-300">|</span>
-            <a href="#" className="text-gray-500 hover:text-purple-600 transition-colors duration-200 text-sm">
+            <a href="#" className="text-gray-500 hover:text-primary-600 transition-colors duration-200 text-sm">
               Terms of Service
             </a>
             <span className="text-gray-300">|</span>
-            <a href="#" className="text-gray-500 hover:text-purple-600 transition-colors duration-200 text-sm">
+            <a href="#" className="text-gray-500 hover:text-primary-600 transition-colors duration-200 text-sm">
               Cookies
             </a>
           </div>
@@ -102,4 +102,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default Footer
